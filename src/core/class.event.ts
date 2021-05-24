@@ -1,4 +1,2 @@
 /** Data packet for interface events */
-export abstract class Event {
-  
-}
+export abstract class Event {}

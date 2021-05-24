@@ -1,4 +1,4 @@
-import { Interface } from "../../core/class.interface";
+import { Interface } from "../../class.interface";
 
 export class ReadableStreamInterface extends Interface {
   buffers: Buffer[] = [];
@@ -19,7 +19,7 @@ export class ReadableStreamInterface extends Interface {
       this.updatePromise(data);
     };
     this._stream.addListener("data", this._listener);
-    this.debugListeners()
+    this.debugListeners();
   }
 
   public close() {
@@ -27,10 +27,10 @@ export class ReadableStreamInterface extends Interface {
       "data",
       this._listener as NonNullable<this["_listener"]>
     );
-    const resolve = this._resolve
+    const resolve = this._resolve;
     this._input = null;
-    resolve(null)
-    this.debugListeners()
+    resolve(null);
+    this.debugListeners();
     // this does not close the stream properly?
   }
 
@@ -52,7 +52,7 @@ export class ReadableStreamInterface extends Interface {
         }
       }
     }
-    return
+    return;
   }
 
   private debugListeners() {
