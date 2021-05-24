@@ -1,2 +1,2 @@
 /** Like a variable */
-export class Entity { }
+export abstract class Entity { }
